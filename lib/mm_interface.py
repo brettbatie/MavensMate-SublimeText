@@ -285,7 +285,7 @@ class MavensMateTerminalCall(threading.Thread):
                 #osx, linux
                 debug('executing mm terminal call:')
                 debug("{0} {1} {2}".format(python_path, pipes.quote(mm_loc), self.get_arguments()))
-                process = subprocess.Popen('\'{0}\' \'{1}\' {2}'.format(python_path, mm_loc, self.get_arguments()), stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
+                process = subprocess.Popen('\'{0}\' \'{1}\' {2}'.format(python_path, mm_loc, self.get_arguments()), stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=none, shell=True)
             else:
                 #windows
                 if self.settings.get('mm_debug_mode', False):
